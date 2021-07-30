@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>WELCOME FISH DIARY </title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<h2 class="container text-center" style="animation-duration: revert">List of Fish Trips</h2>
+    <h3><a th:href="@{/menu}">Main Page</a></h3>
+
+
+    <div>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Fish Name</th>
+                <th>Fish Size(cm)</th>
+                <th>Date</th>
+                <th>Photo</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="fishing: ${fishing}">
+                <td th:text="${fishing.fishName}" class="text-center">Fish Name</td>
+                <td th:text="${fishing.fishSize}" class="text-center">Fish Size (cm)</td>
+                <td th:text="${fishing.date}" class="text-center">Date</td>
+                <td><img alt="" th:src="*{'data:image/jpeg;base64,'+fishing.photo}" style="width:200px; height: 200px "></td>
+
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

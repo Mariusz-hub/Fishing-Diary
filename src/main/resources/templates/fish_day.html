@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Fishing TRIP</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>FISHING TRIP</h1>
+    </div>
+    <form th:action="@{/addFishingDay}" th:object="${fishingDay}"
+          method="post" style="max-width: 600px; margin: 0 auto;" enctype="multipart/form-data">
+        <div class="m-3">
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Fish Name: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{fishName}" class="form-control" required />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Fish Size(cm): </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{fishSize}" class="form-control"
+                           required minlength="2" maxlength="20"/>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-4 col-form-label">Date: </label>
+                <div class="col-8">
+                    <input type="text" th:field="*{date}" class="form-control"
+                           required minlength="2" maxlength="20"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-4 col-form-label">PHOTO: </label>
+                <div class="custom-file mb-4">
+                    <input type="file" name="fileImage" id="fileImage">
+                </div>
+            </div>
+
+
+            <div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
