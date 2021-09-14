@@ -1,5 +1,6 @@
-package com.fisher.user;
+package com.fisher.repository;
 
+import com.fisher.user.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

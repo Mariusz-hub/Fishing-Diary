@@ -1,4 +1,4 @@
-package com.fisher.user;
+package com.fisher.repository;
 
 import com.fisher.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
