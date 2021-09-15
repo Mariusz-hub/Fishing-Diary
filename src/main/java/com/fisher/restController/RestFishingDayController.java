@@ -1,9 +1,9 @@
-package com.fisher.FishingDay;
+package com.fisher.restController;
 
 
+import com.fisher.FishingDay.FishingDay;
+import com.fisher.exceptions.service.FishingDayService;
 import com.fisher.exceptions.FishingDayNotFoundException;
-import com.fisher.exceptions.UserNotFoundException;
-import com.fisher.user.RestUserController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
