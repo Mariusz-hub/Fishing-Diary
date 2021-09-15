@@ -1,6 +1,6 @@
 package com.fisher.repository;
 
-import com.fisher.FishingDay.FishingDay;
+import com.fisher.domain.FishingDay;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

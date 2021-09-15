@@ -2,9 +2,9 @@ package com.fisher.restController;
 
 
 import com.fisher.exceptions.UserNotFoundException;
-import com.fisher.user.User;
-import com.fisher.user.UserDTO;
-import com.fisher.exceptions.service.UserService;
+import com.fisher.domain.User;
+import com.fisher.dto.UserDTO;
+import com.fisher.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

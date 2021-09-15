@@ -1,4 +1,4 @@
-package com.fisher.user;
+package com.fisher.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

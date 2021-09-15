@@ -1,7 +1,8 @@
-package com.fisher.FishingDay;
+package com.fisher.frontController;
 
 
-import com.fisher.exceptions.service.FishingDayService;
+import com.fisher.domain.FishingDay;
+import com.fisher.service.FishingDayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

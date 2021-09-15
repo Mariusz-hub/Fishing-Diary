@@ -1,4 +1,4 @@
-package com.fisher.user;
+package com.fisher.domain;
 
 import javax.persistence.*;
 import java.util.Date;

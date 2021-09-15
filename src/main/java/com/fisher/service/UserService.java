@@ -1,11 +1,11 @@
-package com.fisher.exceptions.service;
+package com.fisher.service;
 
 import com.fisher.repository.UserRepository;
 import com.fisher.repository.UserRoleRepository;
-import com.fisher.user.User;
-import com.fisher.user.UserDTO;
-import com.fisher.user.UserMapper;
-import com.fisher.user.UserRole;
+import com.fisher.domain.User;
+import com.fisher.dto.UserDTO;
+import com.fisher.utils.UserMapper;
+import com.fisher.domain.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

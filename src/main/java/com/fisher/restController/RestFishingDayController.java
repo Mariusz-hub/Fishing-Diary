@@ -1,8 +1,8 @@
 package com.fisher.restController;
 
 
-import com.fisher.FishingDay.FishingDay;
-import com.fisher.exceptions.service.FishingDayService;
+import com.fisher.domain.FishingDay;
+import com.fisher.service.FishingDayService;
 import com.fisher.exceptions.FishingDayNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

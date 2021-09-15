@@ -2,9 +2,9 @@ package com.fisher;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fisher.user.User;
+import com.fisher.domain.User;
 import com.fisher.repository.UserRepository;
-import com.fisher.user.UserRole;
+import com.fisher.domain.UserRole;
 import com.fisher.repository.UserRoleRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

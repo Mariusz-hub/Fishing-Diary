@@ -1,8 +1,8 @@
-package com.fisher.exceptions.service;
+package com.fisher.service;
 
 
 
-import com.fisher.FishingDay.FishingDay;
+import com.fisher.domain.FishingDay;
 import com.fisher.exceptions.FishingDayNotFoundException;
 import com.fisher.repository.FishingDayRepository;
 import org.springframework.beans.factory.annotation.Autowired;

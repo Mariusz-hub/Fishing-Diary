@@ -1,7 +1,7 @@
 package com.fisher.security;
 
-import com.fisher.user.User;
-import com.fisher.user.UserRole;
+import com.fisher.domain.User;
+import com.fisher.domain.UserRole;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

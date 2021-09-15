@@ -1,6 +1,8 @@
-package com.fisher.user;
+package com.fisher.frontController;
 
-import com.fisher.exceptions.service.UserService;
+import com.fisher.service.UserService;
+import com.fisher.domain.User;
+import com.fisher.domain.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
