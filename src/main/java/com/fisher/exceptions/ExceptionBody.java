@@ -1,11 +1,13 @@
 package com.fisher.exceptions;
 
-
 public class ExceptionBody {
 
         private String message;
+
         private String timestamp;
+
         private String path;
+
         private int status;
 
     public ExceptionBody(Builder builder) {
@@ -60,8 +62,11 @@ public class ExceptionBody {
     public static class Builder {
 
         private String message;
+
         private String timestamp;
+
         private String path;
+
         private int status;
 
         public Builder message (String message){

@@ -1,22 +1,25 @@
 package com.fisher.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-
 import java.util.Date;
 
 public class UserDTO {
 
     @JsonProperty(value = "email")
     private String email;
+
     @JsonProperty(value = "firstName")
     private String firstName;
+
     @JsonProperty(value = "lastName")
     private String lastName;
+
     @JsonProperty(value = "phoneNumber")
     private String phoneNumber;
+
     @JsonProperty(value = "Registration_Date")
     private Date registrationDate;
+
     @JsonProperty(value = "enabled")
     private boolean enabled;
 
@@ -91,12 +94,16 @@ public class UserDTO {
 
     public static class Builder {
 
-
         private String email;
+
         private String firstName;
+
         private String lastName;
+
         private String phoneNumber;
+
         private Date registrationDate;
+
         private boolean enabled;
 
         public Builder email (String email){

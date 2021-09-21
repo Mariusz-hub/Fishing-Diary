@@ -1,9 +1,6 @@
 package com.fisher.domain;
-
-
-
-
 import javax.persistence.*;
+
 @Entity
 @Table(name = "fishing_day")
 public class FishingDay {
@@ -25,7 +22,6 @@ public class FishingDay {
     @Column(name="date")
     public String date;
 
-
     public FishingDay() {
     }
 
@@ -37,7 +33,6 @@ public class FishingDay {
         this.date = date;
     }
 
-
     public Long getId() {
         return id;
     }
@@ -45,7 +40,6 @@ public class FishingDay {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getFishName() {
         return fishName;

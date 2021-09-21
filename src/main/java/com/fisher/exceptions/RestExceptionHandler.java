@@ -27,4 +27,5 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     }
 
+    //todo FishingDayNotFound
 }

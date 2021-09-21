@@ -1,6 +1,5 @@
 package com.fisher.restController;
 
-
 import com.fisher.exceptions.UserNotFoundException;
 import com.fisher.domain.User;
 import com.fisher.dto.UserDTO;
@@ -11,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -22,7 +20,6 @@ public class RestUserController {
 
     @Autowired
     private final UserService userService;
-
 
     public RestUserController(UserService userService) {
         this.userService = userService;
@@ -55,6 +52,7 @@ public class RestUserController {
 
         return  new ResponseEntity<>(user,HttpStatus.OK);
     }
+
     @GetMapping("users/{id}")
     public ResponseEntity<User> getUserById(@PathVariable(value = "id") Long id){
         User user = userService.findUserById(id);
@@ -82,7 +80,5 @@ public class RestUserController {
         return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
 
-
-
-
+    //todo change REST API
 }

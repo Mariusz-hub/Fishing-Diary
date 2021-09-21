@@ -1,9 +1,6 @@
 package com.fisher.domain;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "roles")
@@ -13,6 +10,7 @@ public class UserRole {
     @Column(name = "role_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(nullable = false, length = 45)
     private String name;
 
@@ -28,13 +26,10 @@ public class UserRole {
         this.id = id;
     }
 
-
     public UserRole(Long id, String name) {
         this.id = id;
         this.name = name;
     }
-
-
 
     public Long getId() {
         return id;

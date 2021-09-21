@@ -16,20 +16,24 @@ public class User {
 
     @Column(nullable = false, length = 45)
     private String email;
+
     @Column(nullable = false, length = 64)
     private String password;
+
     @Column(nullable = false, length = 20)
     private String firstName;
+
     @Column(nullable = false, length = 20)
     private String lastName;
+
     @Column(nullable = false,length = 9)
     private String phoneNumber;
+
     @Column(nullable = true,length = 12)
     private Date registrationDate = new Date();
+
     @Column(nullable = false)
     private boolean enabled=true;
-
-
 
     @ManyToMany(fetch = FetchType.EAGER) //(fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
@@ -67,8 +71,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
 
     public String getFirstName() {
         return firstName;

@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.transaction.Transactional;
 import java.io.IOException;
 import java.util.Base64;
@@ -27,14 +26,10 @@ public class FishingDayService {
         this.fishingDayRepository = fishingDayRepository;
     }
 
-
-    public FishingDay saveFishingDayToDB(MultipartFile file, String fishName, String date, int fishSize
-            )
-    {
+    public FishingDay saveFishingDayToDB(MultipartFile file, String fishName, String date, int fishSize) {
         FishingDay p = new FishingDay();
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        if(fileName.contains(".."))
-        {
+        if(fileName.contains("..")) {
             System.out.println("not a a valid file");
         }
         try {

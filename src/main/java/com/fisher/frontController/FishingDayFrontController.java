@@ -1,6 +1,5 @@
 package com.fisher.frontController;
 
-
 import com.fisher.domain.FishingDay;
 import com.fisher.service.FishingDayService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.IOException;
 import java.util.List;
-
 
 @Controller
 public class FishingDayFrontController {
@@ -28,9 +25,7 @@ public class FishingDayFrontController {
     @GetMapping("/menu")
     public String viewMenu(){
         return "welcome";
-
     }
-
 
     @GetMapping("/fishDayForm")
     public String fishDayForm(Model model){
@@ -38,18 +33,14 @@ public class FishingDayFrontController {
         return "fish_day";
     }
 
-
     @PostMapping("/addFishingDay")
     public String saveUser(@RequestParam("file") MultipartFile file,
                            @RequestParam String fishName,
                            @RequestParam Integer fishSize,
                            @RequestParam String date ) throws IOException {
         fishingDayService.saveFishingDayToDB(file, fishName,date, fishSize);
-
         return "added_trip";
     }
-
-
 
     @GetMapping("/list")
     public String showAllFishingDays(Model model){

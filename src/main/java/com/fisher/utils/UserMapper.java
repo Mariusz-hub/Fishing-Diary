@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 public class UserMapper implements DTOMapper <User, UserDTO>{
 
     private final static Logger logger = LoggerFactory.getLogger(UserMapper.class);
+
     @Override
     public UserDTO from (User from) {
         UserDTO userDTO = new UserDTO.Builder()

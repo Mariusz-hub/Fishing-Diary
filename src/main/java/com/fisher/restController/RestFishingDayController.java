@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.util.List;
 
 
@@ -20,6 +19,7 @@ import java.util.List;
 public class RestFishingDayController {
 
     private static final Logger logger = LoggerFactory.getLogger(RestUserController.class);
+
     @Autowired
     private final FishingDayService fishingDayService;
 
@@ -39,8 +39,7 @@ public class RestFishingDayController {
     @PutMapping(path="{fishingDayId}")
     public void updateFishingDay(@PathVariable("fishingDayId") Long fishingDayId,
                               @RequestParam(required = false) String fishName,
-                              @RequestParam (required = false) int fishSize
-    ){
+                              @RequestParam (required = false) int fishSize) {
         fishingDayService.updateFishingDay(fishingDayId,fishName,fishSize);
     }
 
@@ -76,5 +75,5 @@ public class RestFishingDayController {
         logger.info("FishDay with id {} not exists", id);
         return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
-
+//todo change REST API, , add Loger
 }

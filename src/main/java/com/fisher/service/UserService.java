@@ -9,7 +9,6 @@ import com.fisher.domain.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,8 +18,10 @@ public class UserService {
 
     @Autowired
     private final UserRepository userRepository;
+
     @Autowired
     private final UserRoleRepository userRoleRepository;
+
     @Autowired
     private final UserMapper userMapper;
 
@@ -29,7 +30,6 @@ public class UserService {
         this.userRoleRepository = userRoleRepository;
         this.userMapper = userMapper;
     }
-
 
     public void saveUserWithDeafultRole(User user){
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -40,6 +40,7 @@ public class UserService {
         userRepository.save(user);
 
     }
+
     public void saveOrUpadteUser(User user){
         userRepository.findUserByEmail(user.getEmail());
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -52,21 +53,21 @@ public class UserService {
     public List<User> getAllUsers(){
         return userRepository.findAll();
     }
+
     public User getUser(Long id){
 
        return userRepository.findById(id).get();
     }
+
     public List<UserRole> getRoles(){
         return userRoleRepository.findAll();
     }
-
 
     public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
     public User findUserById(Long id) {
-
         return userRepository.findById(id).orElse(null);
     }
 
